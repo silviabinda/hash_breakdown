@@ -1,16 +1,22 @@
 # THIS CODE IS EXECUTED FROM THE ESP32 HANDLING THE OLED DISPLAY
 # it receives messages from the main code which has to be shown on oled display and is shown on the oled display
+# also it turns a RGB LED on (the RGB LED is mounted on the back of the 3D print module with router)
 
 # ESP32 data for router:
 # mpy-esp32
 # 24-DC-C3-9F-D4-8C
 # 192.168.0.104
-# Connecting OLED 0.91'to the esp32:
 
+# Connecting OLED 0.91'to the esp32:
 # SCL = GPIO22
 # SDA = GPIO21
 # VCC = 3.3V
 # GND = GND
+
+# Connecting RGB LED to the esp32:
+# G = GPIO27
+# B = GPIO26
+# - = GND
 
 from machine import Pin, SoftI2C, PWM
 import ssd1306 # library for oled display
@@ -35,9 +41,9 @@ s.bind(esp32_oled)
 # defining a string variable and its initial value:
 message = '...processing...' 
 
-# Setup the PWM pins for RGB LED
-greenPin = PWM(Pin(27)) # Assuming GPIO 22 for the green LED
-bluePin = PWM(Pin(26))  # Assuming GPIO 21 for the blue LED
+# Setup the PWM pins for RGB LED (we only use green and blue pins of the rgb led)
+greenPin = PWM(Pin(27)) # Assuming GPIO 27 for the green LED
+bluePin = PWM(Pin(26))  # Assuming GPIO 26 for the blue LED
 
 # Initialize PWM frequency
 greenPin.freq(500)

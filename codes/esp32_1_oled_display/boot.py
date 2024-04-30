@@ -1,22 +1,34 @@
-# THIS CODE IS EXECUTED FROM THE ESP32 HANDLING THE OLED DISPLAY
-# it receives messages from the main code which has to be shown on oled display and is shown on the oled display
-# also it turns a RGB LED on (the RGB LED is mounted on the back of the 3D print module with router)
+'''
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::: Hash Breakdown by Silvia Binda Heiserova :::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::: 2024 ::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-# ESP32 data for router:
+SPDX-FileCopyrightText: © 2024 Silvia Binda Heiserova silviaheiserova@gmail.com
+SPDX-License-Identifier: MIT
+
+This code is part of "Hash Breakdown" by Silvia Binda Heiserova, 2024
+
+THIS CODE IS EXECUTED FROM THE ESP32 HANDLING THE OLED DISPLAY:
+- it receives messages from the main code which has to be shown on oled display and is shown on the oled display
+- also it turns a RGB LED on (the RGB LED is mounted on the back of the 3D print module with router)
+
+# my ESP32 data for router:
 # mpy-esp32
 # 24-DC-C3-9F-D4-8C
 # 192.168.0.104
 
-# Connecting OLED 0.91'to the esp32:
-# SCL = GPIO22
-# SDA = GPIO21
-# VCC = 3.3V
-# GND = GND
+Connecting OLED 0.91'to the esp32:
+SCL = GPIO22
+SDA = GPIO21
+VCC = 3.3V
+GND = GND
 
-# Connecting RGB LED to the esp32:
-# G = GPIO27
-# B = GPIO26
-# - = GND
+Connecting RGB LED to the esp32:
+G = GPIO27
+B = GPIO26
+- = GND
+'''
 
 from machine import Pin, SoftI2C, PWM
 import ssd1306 # library for oled display

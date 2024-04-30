@@ -51,7 +51,6 @@ bluePin.freq(500)
 bluePin.duty(300) #blue
 greenPin.duty(50) #red
 
-
 # function for recieving messages from server:
 def recmensaje():
     global message, dir # global variables

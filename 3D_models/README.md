@@ -1,8 +1,8 @@
 # Info on 3D models
 
-In the folder "3D_models", you can file .stl files of all the 3D printed parts that are included in the Hash Breakdown artwork.
+In the folder "3D_models", you can find .stl files of all the 3D printed parts that are included in the Hash Breakdown artwork.
 
-First, print the base modules in the folder "base". Altoghether, in the final set up, there are 17 basic modules, 5 of which represent the OR logic gate and 12 representing the AND logic gate.
+First, print the base modules from the folder "base". Altoghether, in the final set up, there are 17 basic modules, 5 of which represent the OR logic gate and 12 representing the AND logic gate.
 
 In the "holders" folder, you will find different types of holders for components such as ESP32, amplifier, oled display.
 
